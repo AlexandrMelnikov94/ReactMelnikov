@@ -12,17 +12,20 @@ import React from "react";
 //   )
 // }
 
-// const car = () => (
-//   <div>
-//     This is car component
-//     <strong>test</strong>
-//   </div>
-// )
-
-
-export default () => (
+const car = props => (
   <div>
-    This is car component
-    <strong>test</strong>
+    <h3>Car name: {props.name}</h3>
+    <p>Year: <strong>{props.year}</strong></p>
+    {props.children}
   </div>
-);
+)
+
+export default car;
+
+
+// export default () => (
+//   <div>
+//     <p>This is car component</p>
+//     <p><strong>{1 + 1}</strong></p>
+//   </div>
+// );
